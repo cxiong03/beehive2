@@ -38,5 +38,36 @@
 }
 
 .box {
-  border: 1px solid pink;
+  border: 1px solid gray;
+  border-bottom-width: 0;
+  border-radius: 18px;
+  box-shadow: 1px 10px 10px rgb(87, 81, 82);
+  margin-bottom: 25px;
+  max-width: 600px;
+  width: 80%;
+  padding: 0 8px;
+  background-color: darkgoldenrod;
+}
+
+.resourceList {
+  margin: 0 8%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.header {
+  display: flex;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: rgb(168, 56, 56);
+}
+
+.title {
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 8px 16px rgb(255, 128, 149);
+  color: rgba(255, 255, 255, 0.712);
 }
