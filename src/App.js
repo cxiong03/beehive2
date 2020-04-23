@@ -11,10 +11,19 @@ class App extends Component {
   //   super(props);
   //   this.renderPosts.bind(this)
   // }
+  state = {
+    resources: [...resources]
+  }
+
+  addResource = (newResource) => {
+    this.setState({
+      resource: [...this.state.resources, newResource]
+    })
+  }
 
   renderPosts() {
-    const display = resources.map((resource) => {
-      return <Resource resource={resource} />;
+    const display = this.state.resources.map((resource) => {
+      return <Resource resource={resource} key={resource.title} />;
     })
     return display;
   }
@@ -29,7 +38,7 @@ class App extends Component {
         </div>
       </div>
         <div className="resourceList">{this.renderPosts()}</div>
-        <ResourceForm />
+        <ResourceForm addResource={this.addResource} />
       </div>
     );
   }
