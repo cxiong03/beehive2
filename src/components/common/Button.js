@@ -3,9 +3,8 @@ import React from 'react';
 const Button = (props) => {
     return (
         <button {...props} style={{ ...styles.button, ...props.buttonStyle }}>{props.children}</button>
-
-    )
-}
+    );
+};
 
 const styles = {
     button: {
@@ -23,6 +22,6 @@ const styles = {
         paddingTop: 10,
         paddingBottom: 10,
     },
-}
+};
 
 export default Button;
