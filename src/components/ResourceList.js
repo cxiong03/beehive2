@@ -9,12 +9,12 @@ import Resource from './Resource'
 class ResourceList extends Component {
   state = {
     query: "",
-    searchedResources: [...this.props.resources],
+    searchedResources: [...this.props.resources.list],
   };
 
   handleChange = (e) => {
     const query = e.target.value;
-    const newList = this.props.resources.filter (
+    const newList = this.props.resources.list.filter (
       (resource) => {
         const index = resource.title.toLowerCase().indexOf(query.toLowerCase());
         if (index >= 0) {
@@ -84,8 +84,9 @@ const myStyles = {
 
 const mapStoreToProps = store => {
   return {
-    count: store.resources.count
-  }
+    count: store.resources.count,
+    resources: store.resources,
+  };
 }
 
 export default connect(mapStoreToProps, {
