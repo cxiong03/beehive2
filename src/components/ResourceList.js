@@ -38,7 +38,7 @@ class ResourceList extends Component {
 
     renderPosts = () => {
         const display = this.state.searchedResources.map((resource) => {
-          return (<Resource resource={resource} key={resource.id} onSelect={this.props.onSelect} />
+          return (<Resource resource={resource} key={resource.id} />
           );
         });
         return display;

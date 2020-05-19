@@ -167,7 +167,11 @@ const mapStoreToProps = (store) => {
   };
 };
 
-export default connect(mapStoreToProps, {
-  changeForm,
-  submitForm
-})(ResourceForm);
+const mapActionsToProps = () => {
+  return {
+    changeForm,
+    submitForm,
+  }
+}
+
+export default connect(mapStoreToProps, mapActionsToProps())(ResourceForm);
